@@ -1,3 +1,4 @@
+
 name: CI Pipeline
 
 on:
@@ -8,8 +9,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Run command
-        run: echo "Hello mama CI/CD working 🚀"
+      - name: Install dependencies
+        run: echo "Installing dependencies..."
+
+      - name: Run tests
+        run: echo "Running tests..."
+
+      - name: Build project
+        run: echo "Building project..."
+
+      - name: Success message
+        run: echo "Pipeline completed successfully 🚀"
